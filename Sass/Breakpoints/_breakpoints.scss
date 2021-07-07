@@ -1,0 +1,23 @@
+@mixin breakpoints($breakpoint) {
+    @if ($breakpoint == 1680) {
+        @media screen and (max-width: 1680px) {
+            @content;
+        }
+    } @else if ($breakpoint == 1280) {
+        @media screen and (max-width: 1280px) {
+            @content;
+        }
+    } @else if ($breakpoint == 980) {
+        @media screen and (max-width: 980px) {
+            @content;
+        }
+    } @else if($breakpoint == 736) {
+        @media screen and (max-width: 736px) {
+            @content;
+        }
+    } @else if($breakpoint == 480) {
+        @media screen and (max-width: 480px) {
+            @content;
+        }
+    }
+}
