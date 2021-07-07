@@ -1,8 +1,13 @@
+@use "../Breakpoints/breakpoints";
 // Reset margin and padding
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 //Typography
@@ -16,18 +21,11 @@
     line-height: 1.65em;
 }
 
-body {
-    @include typography;
-}
-
-.icon.large > * {
-    font-size: 4em;
-}
-
-a {
-    text-decoration: none;
-    color: inherit;
-    transition: all 0.25s ease;
+@mixin background-image {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
 }
 
 @mixin button {
@@ -45,11 +43,32 @@ a {
     transition: all 0.25s ease;
 }
 
+body {
+    @include typography;
+    @include breakpoints.breakpoints(1680) {
+        font-size: 14pt;
+    }
+    @include breakpoints.breakpoints(1280) {
+        font-size: 13pt;
+    }
+    @include breakpoints.breakpoints(736) {
+        font-size: 12pt;
+    }
+}
+
+.icon.large > * {
+    font-size: 4em;
+    @include breakpoints.breakpoints(736) {
+        font-size: 2.5em;
+    }
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.25s ease;
+}
+
 ul {
     list-style: none;
 }
-
-.button {
-    @include button;
-}
-
