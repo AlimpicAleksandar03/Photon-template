@@ -69,6 +69,7 @@
     @include breakpoints.breakpoints(1280) {
         padding: 4em 0 2em 0;
     }
+    
     @include breakpoints.breakpoints(980) {
         text-align: center;
         padding: 5em 3em 3em 3em;
