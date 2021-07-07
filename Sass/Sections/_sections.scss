@@ -1,3 +1,5 @@
+@use "../Common/common";
+@use "../Breakpoints/breakpoints";
 // Common
 .section {
     padding: 6em 0 4em 0;
@@ -5,6 +7,11 @@
         margin: 0 auto;
         max-width: calc(100% - 4em);
         width: 60em;
+        @include breakpoints.breakpoints(980) {
+            width: 100%;
+            margin: 0;
+            max-width: none;
+        }
         .section-header {
             margin-bottom: 2.5em;
             position: relative;
@@ -23,6 +30,9 @@
                 top: 100%;
                 left: 0;
                 margin-top: 1.25em;
+                @include breakpoints.breakpoints(980) {
+                    left: 45%;
+                }
             }
         }
         .section-header.center {
@@ -44,6 +54,29 @@
             .col-4 {
                 width: calc(100% / 3);
             }
+            @include breakpoints.breakpoints(980) {
+                flex-direction: column;
+                width: 100%;
+                margin: 0;
+                .col-12 {
+                    width: 100%;
+                    padding: 0;
+                }
+            }
+        }
+    }
+    // breakpoints
+    @include breakpoints.breakpoints(1280) {
+        padding: 4em 0 2em 0;
+    }
+    @include breakpoints.breakpoints(980) {
+        text-align: center;
+        padding: 5em 3em 3em 3em;
+    }
+    @include breakpoints.breakpoints(736) {
+        padding: 2.5em 1.5em 1.5em 1.5em;
+        br {
+            display: none;
         }
     }
 }
@@ -60,10 +93,18 @@
     }
     .image {
         width: 100%;
+        margin-bottom: 2em;
         img {
             display: block;
             width: 100%;
             border-radius: 5px;
+        }
+    }
+    .container {
+        .row {
+            @include breakpoints.breakpoints(980) {
+                flex-direction: column-reverse;
+            }
         }
     }
 }
@@ -71,12 +112,10 @@
 //Style 2
 .style-2 {
     background-image: url("/Photon-template/Images/misael-moreno-ttLeeAdG-gE-unsplash.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-attachment: fixed;
+    @include common.background-image;
     color: #fff;
     .major-icons {
+        margin: 0 0 2em 0;
         li {
             padding: 2.5em;
             display: inline-block;
@@ -91,6 +130,16 @@
                 i {
                     display: block;
                     transform: rotate(-45deg);
+                }
+                @include breakpoints.breakpoints(980) {
+                    height: 7em;
+                    line-height: 7em;
+                    width: 7em;
+                }
+                @include breakpoints.breakpoints(736) {
+                    height: 5em;
+                    line-height: 5em;
+                    width: 5em;
                 }
             }
             &:first-child {
@@ -110,6 +159,12 @@
             }
             &:nth-child(6) {
                 color: #6b88e6;
+            }
+            @include breakpoints.breakpoints(1280) {
+                padding: 2em;
+            }
+            @include breakpoints.breakpoints(736) {
+                padding: 1.5em;
             }
         }
     }
@@ -159,6 +214,9 @@
                 color: #666;
                 border: 1px solid rgba(144, 144, 144, 0.5);
             }
+            .button {
+                @include common.button;
+            }
         }
     }
 }
@@ -166,10 +224,7 @@
 //Style 4
 .style-4 {
     background-image: url("/Photon-template/Images/matteo-grando-x6zKRlXqyic-unsplash.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-attachment: fixed;
+    @include common.background-image;
     color: #fff;
     .container {
         text-align: center;
@@ -188,6 +243,9 @@
             li:first-child {
                 padding-right: 1em;
             }
+            .button {
+                @include common.button;
+            }
             .button.wide {
                 min-width: 12em;
             }
@@ -204,6 +262,9 @@
                     background-color: transparent;
                     color: #fff;
                 }
+            }
+            @include breakpoints.breakpoints(980) {
+                margin-bottom: 2em;
             }
         }
     }
