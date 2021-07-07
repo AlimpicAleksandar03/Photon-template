@@ -1,0 +1,210 @@
+// Common
+.section {
+    padding: 6em 0 4em 0;
+    > .container {
+        margin: 0 auto;
+        max-width: calc(100% - 4em);
+        width: 60em;
+        .section-header {
+            margin-bottom: 2.5em;
+            position: relative;
+            h2 {
+                line-height: 1.35em;
+                font: {
+                    weight: 300;
+                    size: 2em;
+                }
+            }
+            &::after {
+                content: "";
+                width: 6em;
+                height: 1px;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                margin-top: 1.25em;
+            }
+        }
+        .section-header.center {
+            &::after {
+                left: 45%;
+            }
+        }
+
+        .row {
+            display: flex;
+            flex-flow: wrap;
+            margin-left: -3em;
+            > * {
+                padding-left: 3em;
+            }
+            .col-6 {
+                width: 50%;
+            }
+            .col-4 {
+                width: calc(100% / 3);
+            }
+        }
+    }
+}
+
+// Style 1
+.style-1 {
+    .section-header {
+        &::after {
+            background-color: rgba(144, 144, 144, 0.5);
+        }
+        h2 {
+            color: #555;
+        }
+    }
+    .image {
+        width: 100%;
+        img {
+            display: block;
+            width: 100%;
+            border-radius: 5px;
+        }
+    }
+}
+
+//Style 2
+.style-2 {
+    background-image: url("/Photon-template/Images/misael-moreno-ttLeeAdG-gE-unsplash.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    color: #fff;
+    .major-icons {
+        li {
+            padding: 2.5em;
+            display: inline-block;
+            .icon {
+                border: 1px solid white;
+                width: 8em;
+                height: 8em;
+                text-align: center;
+                line-height: 8em;
+                border-radius: 5px;
+                transform: rotate(45deg);
+                i {
+                    display: block;
+                    transform: rotate(-45deg);
+                }
+            }
+            &:first-child {
+                color: #c3e895;
+            }
+            &:nth-child(2) {
+                color: #8addaa;
+            }
+            &:nth-child(3) {
+                color: #6bd4c8;
+            }
+            &:nth-child(4) {
+                color: #57aed3;
+            }
+            &:nth-child(5) {
+                color: #4a87d3;
+            }
+            &:nth-child(6) {
+                color: #6b88e6;
+            }
+        }
+    }
+
+    .section-header {
+        &::after {
+            background-color: rgba(255, 255, 255);
+        }
+    }
+    p {
+        margin-bottom: 2em;
+    }
+}
+
+//Style 3
+.style-3 .container {
+    text-align: center;
+    .section-header {
+        &::after {
+            background-color: rgba(144, 144, 144, 0.5);
+        }
+    }
+    p {
+        margin-bottom: 2em;
+    }
+    .col-4 {
+        .image {
+            width: 100%;
+            margin-bottom: 2em;
+            img {
+                display: block;
+                width: 100%;
+                border-radius: 5px;
+            }
+        }
+        h3 {
+            font-size: 1.35em;
+            line-height: 1.5em;
+            font: {
+                weight: 300;
+            }
+            margin-bottom: 1em;
+        }
+        .actions {
+            margin-bottom: 2em;
+            .button.primary {
+                color: #666;
+                border: 1px solid rgba(144, 144, 144, 0.5);
+            }
+        }
+    }
+}
+
+//Style 4
+.style-4 {
+    background-image: url("/Photon-template/Images/matteo-grando-x6zKRlXqyic-unsplash.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    color: #fff;
+    .container {
+        text-align: center;
+        .section-header {
+            &::after {
+                background-color: #fff;
+            }
+        }
+        p {
+            margin-bottom: 2em;
+        }
+        .actions.flex {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            li:first-child {
+                padding-right: 1em;
+            }
+            .button.wide {
+                min-width: 12em;
+            }
+            .button.transparent {
+                background: transparent;
+                &:hover {
+                    background-color: rgba(255, 255, 255, 0.15);
+                }
+            }
+            .button.white {
+                background: white;
+                color: #333;
+                &:hover {
+                    background-color: transparent;
+                    color: #fff;
+                }
+            }
+        }
+    }
+}

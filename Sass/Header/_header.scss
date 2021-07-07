@@ -1,0 +1,66 @@
+.header {
+    background-color: #4686a0;
+    text-align: center;
+    padding: 9em 0 10em 0;
+    background-image: url("images/overlay2.png"), url("images/overlay3.svg"),
+        linear-gradient(45deg, #9dc66b 2%, #4fa49a 30%, #4361c2);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    .inner {
+        .icon.cloud {
+            color: #fff;
+            margin: 0 0 1.5em 0;
+        }
+
+        h1 {
+            color: #fff;
+            font: {
+                weight: 300;
+                size: 2.25em;
+            }
+            line-height: 1.35em;
+
+            strong {
+                font: {
+                    weight: 400;
+                }
+            }
+
+            a {
+                border-bottom: 1px dotted rgba(255, 255, 255, 0.5);
+                &:hover {
+                    border-color: transparent;
+                }
+            }
+            margin-bottom: 0.45em;
+        }
+
+        p {
+            color: rgba(255, 255, 255, 0.75);
+            margin-bottom: 1.75em;
+        }
+
+        .actions {
+            li {
+                position: relative;
+                &::after {
+                    content: "";
+                    height: 100vh;
+                    width: 1px;
+                    background: white;
+                    position: absolute;
+                    left: 50%;
+                    top: 100%;
+                }
+
+                .button.transparent {
+                    &:hover {
+                        background-color: rgba(255, 255, 255, 0.15);
+                    }
+                }
+            }
+        }
+    }
+}
