@@ -35,11 +35,17 @@
                 }
             }
             margin-bottom: 0.45em;
+            @include breakpoints.breakpoints(480) {
+                font-size: 1.5em;
+            }
         }
 
         p {
             color: rgba(255, 255, 255, 0.75);
             margin-bottom: 1.75em;
+            @include breakpoints.breakpoints(480) {
+                font-size: 0.8em;
+            }
         }
 
         .actions {
@@ -82,5 +88,9 @@
 
     @include breakpoints.breakpoints(736) {
         padding: 3.5em 0;
+    }
+
+    @include breakpoints.breakpoints(480) {
+        padding: 2.5em 0.75em;
     }
 }
