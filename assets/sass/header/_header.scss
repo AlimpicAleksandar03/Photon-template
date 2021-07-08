@@ -1,10 +1,9 @@
-@use "../Common/common";
-@use "../Breakpoints/breakpoints";
+@use "../mixin/mixin";
 .header {
     background-color: #4686a0;
     text-align: center;
     padding: 9em 0 10em 0;
-    @include common.background-image;
+    @include mixin.background-image;
     background-image: url("images/overlay2.png"), url("images/overlay3.svg"),
         linear-gradient(45deg, #9dc66b 2%, #4fa49a 30%, #4361c2);
     overflow: hidden;
@@ -35,7 +34,7 @@
                 }
             }
             margin-bottom: 0.45em;
-            @include breakpoints.breakpoints(480) {
+            @include mixin.breakpoint_xs {
                 font-size: 1.5em;
             }
         }
@@ -43,7 +42,7 @@
         p {
             color: rgba(255, 255, 255, 0.75);
             margin-bottom: 1.75em;
-            @include breakpoints.breakpoints(480) {
+            @include mixin.breakpoint_xs {
                 font-size: 0.8em;
             }
         }
@@ -62,7 +61,7 @@
                 }
 
                 .button {
-                    @include common.button;
+                    @include mixin.button;
                 }
 
                 .button.transparent {
@@ -74,23 +73,23 @@
         }
     }
     // Breakpoints
-    @include breakpoints.breakpoints(1680) {
+    @include mixin.breakpoint_xl {
         padding: 6em 0 7em 0;
     }
 
-    @include breakpoints.breakpoints(1280) {
+    @include mixin.breakpoint_lg {
         padding: 5em 0;
     }
 
-    @include breakpoints.breakpoints(980) {
+    @include mixin.breakpoint_md {
         padding: 8em 3em 8em 3em;
     }
 
-    @include breakpoints.breakpoints(736) {
+    @include mixin.breakpoint_sm {
         padding: 3.5em 0;
     }
 
-    @include breakpoints.breakpoints(480) {
+    @include mixin.breakpoint_xs {
         padding: 2.5em 0.75em;
     }
 }

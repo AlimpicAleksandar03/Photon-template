@@ -1,5 +1,4 @@
-@use "../Common/common";
-@use "../Breakpoints/breakpoints";
+@use "../mixin/mixin";
 // Common
 .section {
     padding: 6em 0 4em 0;
@@ -7,7 +6,7 @@
         margin: 0 auto;
         max-width: calc(100% - 4em);
         width: 60em;
-        @include breakpoints.breakpoints(980) {
+        @include mixin.breakpoint_md {
             width: 100%;
             margin: 0;
             max-width: none;
@@ -21,7 +20,7 @@
                     weight: 300;
                     size: 2em;
                 }
-                @include breakpoints.breakpoints(480) {
+                @include mixin.breakpoint_xs {
                     font-size: 1.25em;
                 }
             }
@@ -33,11 +32,11 @@
                 top: 100%;
                 left: 0;
                 margin-top: 1.25em;
-                @include breakpoints.breakpoints(980) {
+                @include mixin.breakpoint_md {
                     display: none;
                 }
             }
-            @include breakpoints.breakpoints(480) {
+            @include mixin.breakpoint_xs {
                 margin-bottom: 1em;
             }
         }
@@ -60,7 +59,7 @@
             .col-4 {
                 width: calc(100% / 3);
             }
-            @include breakpoints.breakpoints(980) {
+            @include mixin.breakpoint_md {
                 flex-direction: column;
                 width: 100%;
                 margin: 0;
@@ -71,22 +70,22 @@
             }
         }
     }
-    // breakpoints
-    @include breakpoints.breakpoints(1280) {
+    // mixin
+    @include mixin.breakpoint_lg {
         padding: 4em 0 2em 0;
     }
 
-    @include breakpoints.breakpoints(980) {
+    @include mixin.breakpoint_md {
         text-align: center;
         padding: 5em 3em 3em 3em;
     }
-    @include breakpoints.breakpoints(736) {
+    @include mixin.breakpoint_sm {
         padding: 2.5em 1.5em 1.5em 1.5em;
         br {
             display: none;
         }
     }
-    @include breakpoints.breakpoints(480) {
+    @include mixin.breakpoint_xs {
         padding: 1.25em 0.75em 0.75em 0.75em;
     }
 }
@@ -112,7 +111,7 @@
     }
     .container {
         .row {
-            @include breakpoints.breakpoints(980) {
+            @include mixin.breakpoint_md {
                 flex-direction: column-reverse;
             }
         }
@@ -121,8 +120,8 @@
 
 //Style 2
 .style-2 {
-    background-image: url("/Photon-template/Images/misael-moreno-ttLeeAdG-gE-unsplash.jpg");
-    @include common.background-image;
+    background-image: url("/Photon-template/assets/images/matteo-grando-x6zKRlXqyic-unsplash.jpg");
+    @include mixin.background-image;
     color: #fff;
     .major-icons {
         margin: 0 0 2em 0;
@@ -141,12 +140,12 @@
                     display: block;
                     transform: rotate(-45deg);
                 }
-                @include breakpoints.breakpoints(980) {
+                @include mixin.breakpoint_md {
                     height: 7em;
                     line-height: 7em;
                     width: 7em;
                 }
-                @include breakpoints.breakpoints(736) {
+                @include mixin.breakpoint_sm {
                     height: 5em;
                     line-height: 5em;
                     width: 5em;
@@ -170,10 +169,10 @@
             &:nth-child(6) {
                 color: #6b88e6;
             }
-            @include breakpoints.breakpoints(1280) {
+            @include mixin.breakpoint_lg {
                 padding: 2em;
             }
-            @include breakpoints.breakpoints(736) {
+            @include mixin.breakpoint_sm {
                 padding: 1.5em;
             }
         }
@@ -186,7 +185,7 @@
     }
     p {
         margin-bottom: 2em;
-        @include breakpoints.breakpoints(480) {
+        @include mixin.breakpoint_xs {
             font-size: 0.9em;
         }
     }
@@ -202,7 +201,7 @@
     }
     p {
         margin-bottom: 2em;
-        @include breakpoints.breakpoints(480) {
+        @include mixin.breakpoint_xs {
             font-size: 0.9em;
         }
     }
@@ -231,7 +230,7 @@
                 border: 1px solid rgba(144, 144, 144, 0.5);
             }
             .button {
-                @include common.button;
+                @include mixin.button;
             }
         }
     }
@@ -239,8 +238,8 @@
 
 //Style 4
 .style-4 {
-    background-image: url("/Photon-template/Images/matteo-grando-x6zKRlXqyic-unsplash.jpg");
-    @include common.background-image;
+    background-image: url("/Photon-template/assets/images/misael-moreno-ttLeeAdG-gE-unsplash.jpg");
+    @include mixin.background-image;
     color: #fff;
     .container {
         text-align: center;
@@ -251,7 +250,7 @@
         }
         p {
             margin-bottom: 2em;
-            @include breakpoints.breakpoints(480){
+            @include mixin.breakpoint_xs {
                 margin-bottom: 1em;
             }
         }
@@ -280,12 +279,12 @@
                 }
             }
             .button {
-                @include common.button;
+                @include mixin.button;
             }
-            @include breakpoints.breakpoints(980) {
+            @include mixin.breakpoint_md {
                 margin-bottom: 2em;
             }
-            @include breakpoints.breakpoints(480) {
+            @include mixin.breakpoint_xs {
                 flex-direction: column;
                 li {
                     width: 100%;

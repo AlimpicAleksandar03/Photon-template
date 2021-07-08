@@ -50,58 +50,6 @@ ul {
   list-style: none;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  color: #666;
-  font-family: "Source Sans Pro", Helvetica, sans-serif;
-  font-weight: 300;
-  font-size: 16pt;
-  line-height: 1.65em;
-}
-
-@media screen and (max-width: 1680px) {
-  body {
-    font-size: 14pt;
-  }
-}
-@media screen and (max-width: 1280px) {
-  body {
-    font-size: 13pt;
-  }
-}
-@media screen and (max-width: 736px) {
-  body {
-    font-size: 12pt;
-  }
-}
-.icon.large > * {
-  font-size: 4em;
-}
-
-@media screen and (max-width: 736px) {
-  .icon.large > * {
-    font-size: 2.5em;
-  }
-}
-a {
-  text-decoration: none;
-  color: inherit;
-  transition: all 0.25s ease;
-}
-
-ul {
-  list-style: none;
-}
-
 .header {
   background-color: #4686a0;
   text-align: center;
@@ -203,58 +151,6 @@ ul {
   .header {
     padding: 2.5em 0.75em;
   }
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  color: #666;
-  font-family: "Source Sans Pro", Helvetica, sans-serif;
-  font-weight: 300;
-  font-size: 16pt;
-  line-height: 1.65em;
-}
-
-@media screen and (max-width: 1680px) {
-  body {
-    font-size: 14pt;
-  }
-}
-@media screen and (max-width: 1280px) {
-  body {
-    font-size: 13pt;
-  }
-}
-@media screen and (max-width: 736px) {
-  body {
-    font-size: 12pt;
-  }
-}
-.icon.large > * {
-  font-size: 4em;
-}
-
-@media screen and (max-width: 736px) {
-  .icon.large > * {
-    font-size: 2.5em;
-  }
-}
-a {
-  text-decoration: none;
-  color: inherit;
-  transition: all 0.25s ease;
-}
-
-ul {
-  list-style: none;
 }
 
 .section {
@@ -380,7 +276,7 @@ ul {
 }
 
 .style-2 {
-  background-image: url("/Photon-template/Images/misael-moreno-ttLeeAdG-gE-unsplash.jpg");
+  background-image: url("/Photon-template/assets/images/matteo-grando-x6zKRlXqyic-unsplash.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
@@ -516,7 +412,7 @@ ul {
 }
 
 .style-4 {
-  background-image: url("/Photon-template/Images/matteo-grando-x6zKRlXqyic-unsplash.jpg");
+  background-image: url("/Photon-template/assets/images/misael-moreno-ttLeeAdG-gE-unsplash.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
@@ -598,58 +494,6 @@ ul {
   .style-4 .container .actions.flex li .button.wide {
     min-width: none;
   }
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  color: #666;
-  font-family: "Source Sans Pro", Helvetica, sans-serif;
-  font-weight: 300;
-  font-size: 16pt;
-  line-height: 1.65em;
-}
-
-@media screen and (max-width: 1680px) {
-  body {
-    font-size: 14pt;
-  }
-}
-@media screen and (max-width: 1280px) {
-  body {
-    font-size: 13pt;
-  }
-}
-@media screen and (max-width: 736px) {
-  body {
-    font-size: 12pt;
-  }
-}
-.icon.large > * {
-  font-size: 4em;
-}
-
-@media screen and (max-width: 736px) {
-  .icon.large > * {
-    font-size: 2.5em;
-  }
-}
-a {
-  text-decoration: none;
-  color: inherit;
-  transition: all 0.25s ease;
-}
-
-ul {
-  list-style: none;
 }
 
 .footer {

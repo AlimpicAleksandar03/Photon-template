@@ -1,11 +1,10 @@
-@use "../Common/common";
-@use "../Breakpoints/breakpoints";
+@use "../mixin/mixin";
 .footer {
     color: rgba(255, 255, 255, 0.65);
     padding: 6em 0;
     background-color: #4686a0;
     text-align: center;
-    @include common.background-image;
+    @include mixin.background-image;
     background-image: url("images/overlay2.png"), url("images/overlay3.svg"),
         linear-gradient(45deg, #9dc66b 2%, #4fa49a 30%, #4361c2);
     .actions {
@@ -48,7 +47,7 @@
                     color: #fff;
                 }
             }
-            @include breakpoints.breakpoints(480) {
+            @include mixin.breakpoint_xs {
                 display: block;
                 border: 0;
                 padding: 0;
@@ -58,10 +57,10 @@
             }
         }
     }
-    @include breakpoints.breakpoints(1280) {
+    @include mixin.breakpoint_lg {
         padding: 4em 0;
     }
-    @include breakpoints.breakpoints(480) {
+    @include mixin.breakpoint_xs {
         padding: 2em 0;
     }
 }

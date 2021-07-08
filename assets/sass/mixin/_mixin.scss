@@ -1,0 +1,65 @@
+@mixin typography {
+    color: #666;
+    font: {
+        family: "Source Sans Pro", Helvetica, sans-serif;
+        weight: 300;
+        size: 16pt;
+    }
+    line-height: 1.65em;
+}
+
+@mixin background-image {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+}
+
+@mixin button {
+    display: inline-block;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    padding: 0.35em 2em;
+    text-transform: uppercase;
+    font: {
+        size: 0.9em;
+        weight: 400;
+    }
+    letter-spacing: 0.125em;
+    color: #fff;
+    transition: all 0.25s ease;
+    @include breakpoint_xs {
+        width: 100%;
+    }
+}
+//480px --> xs
+//736px --> sm
+//980px --> md
+//1280px --> lg
+//1680px --> xl
+@mixin breakpoint_xs {
+    @media screen and (max-width: 480px) {
+        @content;
+    }
+}
+
+@mixin breakpoint_sm {
+    @media screen and (max-width: 736px) {
+        @content;
+    }
+}
+@mixin breakpoint_md {
+    @media screen and (max-width: 980px) {
+        @content;
+    }
+}
+@mixin breakpoint_lg {
+    @media screen and (max-width: 1280px) {
+        @content;
+    }
+}
+@mixin breakpoint_xl {
+    @media screen and (max-width: 1680px) {
+        @content;
+    }
+}
