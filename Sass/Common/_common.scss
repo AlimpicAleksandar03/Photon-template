@@ -41,6 +41,9 @@ html {
     letter-spacing: 0.125em;
     color: #fff;
     transition: all 0.25s ease;
+    @include breakpoints.breakpoints(480) {
+        width: 100%;
+    }
 }
 
 body {
