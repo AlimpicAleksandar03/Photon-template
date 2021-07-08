@@ -133,9 +133,19 @@ ul {
 .header .inner h1 a:hover {
   border-color: transparent;
 }
+@media screen and (max-width: 480px) {
+  .header .inner h1 {
+    font-size: 1.5em;
+  }
+}
 .header .inner p {
   color: rgba(255, 255, 255, 0.75);
   margin-bottom: 1.75em;
+}
+@media screen and (max-width: 480px) {
+  .header .inner p {
+    font-size: 0.8em;
+  }
 }
 .header .inner .actions li {
   position: relative;
@@ -161,6 +171,11 @@ ul {
   color: #fff;
   transition: all 0.25s ease;
 }
+@media screen and (max-width: 480px) {
+  .header .inner .actions li .button {
+    width: 100%;
+  }
+}
 .header .inner .actions li .button.transparent:hover {
   background-color: rgba(255, 255, 255, 0.15);
 }
@@ -182,6 +197,11 @@ ul {
 @media screen and (max-width: 736px) {
   .header {
     padding: 3.5em 0;
+  }
+}
+@media screen and (max-width: 480px) {
+  .header {
+    padding: 2.5em 0.75em;
   }
 }
 
@@ -261,6 +281,11 @@ ul {
   font-weight: 300;
   font-size: 2em;
 }
+@media screen and (max-width: 480px) {
+  .section > .container .section-header h2 {
+    font-size: 1.25em;
+  }
+}
 .section > .container .section-header::after {
   content: "";
   width: 6em;
@@ -272,7 +297,7 @@ ul {
 }
 @media screen and (max-width: 980px) {
   .section > .container .section-header::after {
-    left: 45%;
+    display: none;
   }
 }
 .section > .container .section-header.center::after {
@@ -320,6 +345,11 @@ ul {
   }
   .section br {
     display: none;
+  }
+}
+@media screen and (max-width: 480px) {
+  .section {
+    padding: 1.25em 0.75em 0.75em 0.75em;
   }
 }
 
@@ -420,6 +450,11 @@ ul {
 .style-2 p {
   margin-bottom: 2em;
 }
+@media screen and (max-width: 480px) {
+  .style-2 p {
+    font-size: 0.9em;
+  }
+}
 
 .style-3 .container {
   text-align: center;
@@ -429,6 +464,11 @@ ul {
 }
 .style-3 .container p {
   margin-bottom: 2em;
+}
+@media screen and (max-width: 480px) {
+  .style-3 .container p {
+    font-size: 0.9em;
+  }
 }
 .style-3 .container .col-4 .image {
   width: 100%;
@@ -464,6 +504,11 @@ ul {
   color: #fff;
   transition: all 0.25s ease;
 }
+@media screen and (max-width: 480px) {
+  .style-3 .container .col-4 .actions .button {
+    width: 100%;
+  }
+}
 
 .style-4 {
   background-image: url("/Photon-template/Images/matteo-grando-x6zKRlXqyic-unsplash.jpg");
@@ -490,18 +535,6 @@ ul {
 .style-4 .container .actions.flex li:first-child {
   padding-right: 1em;
 }
-.style-4 .container .actions.flex .button {
-  display: inline-block;
-  border: 1px solid #fff;
-  border-radius: 5px;
-  padding: 0.35em 2em;
-  text-transform: uppercase;
-  font-size: 0.9em;
-  font-weight: 400;
-  letter-spacing: 0.125em;
-  color: #fff;
-  transition: all 0.25s ease;
-}
 .style-4 .container .actions.flex .button.wide {
   min-width: 12em;
 }
@@ -516,12 +549,44 @@ ul {
   color: #333;
 }
 .style-4 .container .actions.flex .button.white:hover {
-  background-color: transparent;
+  background-color: rgba(255, 255, 255, 0.15);
   color: #fff;
+}
+.style-4 .container .actions.flex .button {
+  display: inline-block;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  padding: 0.35em 2em;
+  text-transform: uppercase;
+  font-size: 0.9em;
+  font-weight: 400;
+  letter-spacing: 0.125em;
+  color: #fff;
+  transition: all 0.25s ease;
+}
+@media screen and (max-width: 480px) {
+  .style-4 .container .actions.flex .button {
+    width: 100%;
+  }
 }
 @media screen and (max-width: 980px) {
   .style-4 .container .actions.flex {
     margin-bottom: 2em;
+  }
+}
+@media screen and (max-width: 480px) {
+  .style-4 .container .actions.flex {
+    flex-direction: column;
+  }
+  .style-4 .container .actions.flex li {
+    width: 100%;
+    padding: 0 !important;
+  }
+  .style-4 .container .actions.flex li:first-child {
+    margin-bottom: 1.5em;
+  }
+  .style-4 .container .actions.flex li .button.wide {
+    min-width: none;
   }
 }
 
@@ -624,9 +689,24 @@ ul {
   border-color: transparent;
   color: #fff;
 }
+@media screen and (max-width: 480px) {
+  .footer .copyright li {
+    display: block;
+    border: 0;
+    padding: 0;
+    margin: 0;
+    margin-top: 1em;
+    font-size: 0.7em;
+  }
+}
 @media screen and (max-width: 1280px) {
   .footer {
     padding: 4em 0;
+  }
+}
+@media screen and (max-width: 480px) {
+  .footer {
+    padding: 2em 0;
   }
 }
 
