@@ -21,6 +21,9 @@
                     weight: 300;
                     size: 2em;
                 }
+                @include breakpoints.breakpoints(480) {
+                    font-size: 1.25em;
+                }
             }
             &::after {
                 content: "";
@@ -31,7 +34,7 @@
                 left: 0;
                 margin-top: 1.25em;
                 @include breakpoints.breakpoints(980) {
-                    left: 45%;
+                    display: none;
                 }
             }
         }
@@ -69,7 +72,7 @@
     @include breakpoints.breakpoints(1280) {
         padding: 4em 0 2em 0;
     }
-    
+
     @include breakpoints.breakpoints(980) {
         text-align: center;
         padding: 5em 3em 3em 3em;
@@ -79,6 +82,9 @@
         br {
             display: none;
         }
+    }
+    @include breakpoints.breakpoints(480) {
+        padding: 1.25em 0.75em 0.75em 0.75em;
     }
 }
 
@@ -177,6 +183,9 @@
     }
     p {
         margin-bottom: 2em;
+        @include breakpoints.breakpoints(480) {
+            font-size: 0.9em;
+        }
     }
 }
 
@@ -190,6 +199,9 @@
     }
     p {
         margin-bottom: 2em;
+        @include breakpoints.breakpoints(480) {
+            font-size: 0.9em;
+        }
     }
     .col-4 {
         .image {
@@ -244,9 +256,6 @@
             li:first-child {
                 padding-right: 1em;
             }
-            .button {
-                @include common.button;
-            }
             .button.wide {
                 min-width: 12em;
             }
@@ -260,12 +269,28 @@
                 background: white;
                 color: #333;
                 &:hover {
-                    background-color: transparent;
+                    background-color: rgba(255, 255, 255, 0.15);
                     color: #fff;
                 }
             }
+            .button {
+                @include common.button;
+            }
             @include breakpoints.breakpoints(980) {
                 margin-bottom: 2em;
+            }
+            @include breakpoints.breakpoints(480) {
+                flex-direction: column;
+                li {
+                    width: 100%;
+                    padding: 0 !important;
+                    &:first-child {
+                        margin-bottom: 1.5em;
+                    }
+                    .button.wide {
+                        min-width: none;
+                    }
+                }
             }
         }
     }
