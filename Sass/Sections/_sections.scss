@@ -37,6 +37,9 @@
                     display: none;
                 }
             }
+            @include breakpoints.breakpoints(480) {
+                margin-bottom: 1em;
+            }
         }
         .section-header.center {
             &::after {
@@ -248,6 +251,9 @@
         }
         p {
             margin-bottom: 2em;
+            @include breakpoints.breakpoints(480){
+                margin-bottom: 1em;
+            }
         }
         .actions.flex {
             display: flex;
