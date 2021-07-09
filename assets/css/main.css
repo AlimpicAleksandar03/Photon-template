@@ -1,7 +1,40 @@
-* {
+html,
+body,
+div,
+form,
+fieldset,
+legend,
+label {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+th,
+td {
+  text-align: left;
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+th,
+td,
+caption {
+  font-weight: normal;
+}
+
+img {
+  border: 0;
 }
 
 html {
@@ -28,15 +61,6 @@ body {
 @media screen and (max-width: 736px) {
   body {
     font-size: 12pt;
-  }
-}
-
-.icon.large > * {
-  font-size: 4em;
-}
-@media screen and (max-width: 736px) {
-  .icon.large > * {
-    font-size: 2.5em;
   }
 }
 
@@ -152,6 +176,14 @@ ul {
     padding: 2.5em 0.75em;
   }
 }
+.header .icon.large > * {
+  font-size: 4em;
+}
+@media screen and (max-width: 736px) {
+  .header .icon.large > * {
+    font-size: 2.5em;
+  }
+}
 
 .section {
   padding: 6em 0 4em 0;
@@ -251,6 +283,14 @@ ul {
 @media screen and (max-width: 480px) {
   .section {
     padding: 1.25em 0.75em 0.75em 0.75em;
+  }
+}
+.section .icon.large > * {
+  font-size: 4em;
+}
+@media screen and (max-width: 736px) {
+  .section .icon.large > * {
+    font-size: 2.5em;
   }
 }
 

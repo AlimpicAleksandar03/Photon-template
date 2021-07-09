@@ -88,6 +88,7 @@
     @include mixin.breakpoint_xs {
         padding: 1.25em 0.75em 0.75em 0.75em;
     }
+    @include mixin.icon_large;
 }
 
 // Style 1
@@ -121,7 +122,7 @@
 //Style 2
 .style-2 {
     background-image: url("/Photon-template/assets/images/matteo-grando-x6zKRlXqyic-unsplash.jpg");
-    @include mixin.background-image;
+    @include mixin.background_adjust;
     color: #fff;
     .major-icons {
         margin: 0 0 2em 0;
@@ -239,7 +240,7 @@
 //Style 4
 .style-4 {
     background-image: url("/Photon-template/assets/images/misael-moreno-ttLeeAdG-gE-unsplash.jpg");
-    @include mixin.background-image;
+    @include mixin.background_adjust;
     color: #fff;
     .container {
         text-align: center;
